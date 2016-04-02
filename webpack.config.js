@@ -1,4 +1,7 @@
-var path = require('path');
+'use strict';
+
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -8,7 +11,6 @@ module.exports = {
       'es6-shim',
       'es6-promise',
       'angular2/bundles/angular2-polyfills',
-      'rxjs',
       'angular2/bootstrap',
       'angular2/platform/browser',
       'angular2/platform/common_dom',
@@ -20,12 +22,12 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/public/assets/',
-    filename: '[name].js'
+    publicPath: '/',
+    filename: '[name].[hash].js',
+    sourceMapFilename: '[name].[hash].js.map'
   },
 
   devServer: {
-    contentBase: 'public',
     host: 'localhost',
     port: 8080
   },
@@ -41,6 +43,14 @@ module.exports = {
       }
     ]
   },
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      inject: 'body',
+      minify: false
+    })
+  ],
 
   resolve: {
     extensions: ['', '.js', '.ts']
