@@ -87,6 +87,11 @@ module.exports = {
         test: /\.scss$/,
         exclude: /node_modules/,
         loader: 'to-string!css!postcss!sass'
+      },
+      {
+        test: /\.html$/,
+        exclude: /node_modules/,
+        loader: 'raw'
       }
     ]
   },
