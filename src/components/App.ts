@@ -4,6 +4,9 @@ import { Component } from 'angular2/core';
   selector: 'app',
   template: `
     <h1>Hello world!</h1>
-  `
+  `,
+  styles: [
+    require('./App.scss')
+  ]
 })
 export class App { }

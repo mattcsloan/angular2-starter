@@ -70,14 +70,19 @@ module.exports = {
       {
         test: /\.ts$/,
         exclude: /node_modules/,
-        loader: 'tslint-loader'
+        loader: 'tslint'
       }
     ],
     loaders: [
       {
         test: /\.ts$/,
         exclude: /node_modules/,
-        loader: 'ts-loader'
+        loader: 'ts'
+      },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        loader: 'to-string!css!postcss!sass'
       }
     ]
   },
@@ -86,5 +91,11 @@ module.exports = {
 
   resolve: {
     extensions: ['', '.js', '.ts']
+  },
+
+  postcss: function() {
+    return [
+      require('postcss-cssnext')
+    ];
   }
 };
