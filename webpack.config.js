@@ -40,7 +40,7 @@ const plugins = basePlugins
 
 module.exports = {
   entry: {
-    app: './src/index',
+    app: ['./src/index'],
     vendor: [
       'es5-shim',
       'es6-shim',
@@ -75,24 +75,24 @@ module.exports = {
       {
         test: /\.ts$/,
         exclude: /node_modules/,
-        loader: 'tslint'
+        loaders: ['tslint']
       }
     ],
     loaders: [
       {
         test: /\.ts$/,
         exclude: /node_modules/,
-        loader: 'ts'
+        loaders: ['ts']
       },
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        loader: 'to-string!css!postcss!sass'
+        loaders: ['to-string', 'css', 'postcss', 'sass']
       },
       {
         test: /\.html$/,
         exclude: /node_modules/,
-        loader: 'raw'
+        loaders: ['raw']
       }
     ]
   },
