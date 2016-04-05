@@ -38,22 +38,30 @@ const plugins = basePlugins
   .concat(process.env.NODE_ENV === 'production' ? prodPlugins : [])
   .concat(process.env.NODE_ENV === 'development' ? devPlugins : []);
 
+const entries = {
+  app: ['./src/index'],
+  vendor: [
+    'es5-shim',
+    'es6-shim',
+    'es6-promise',
+    'angular2/bundles/angular2-polyfills',
+    'angular2/bootstrap',
+    'angular2/platform/browser',
+    'angular2/platform/common_dom',
+    'angular2/core',
+    'angular2/router',
+    'angular2/http'
+  ]
+};
+
+if (process.env.NODE_ENV === 'development') {
+  for (let entry in entries) {
+    entries[entry].unshift('webpack-dev-server/client?http://localhost:8080/');
+  }
+}
+
 module.exports = {
-  entry: {
-    app: ['./src/index'],
-    vendor: [
-      'es5-shim',
-      'es6-shim',
-      'es6-promise',
-      'angular2/bundles/angular2-polyfills',
-      'angular2/bootstrap',
-      'angular2/platform/browser',
-      'angular2/platform/common_dom',
-      'angular2/core',
-      'angular2/router',
-      'angular2/http'
-    ]
-  },
+  entry: entries,
 
   output: {
     path: path.resolve(__dirname, 'dist'),

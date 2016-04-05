@@ -5,7 +5,8 @@
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cross-env NODE_ENV=development webpack-dev-server --inline",
+    "start": "cross-env NODE_ENV=development webpack-dev-server",
+    "postinstall": "typings install",
     "build": "npm run clean && cross-env NODE_ENV=development webpack",
     "build:prod": "npm run clean && cross-env NODE_ENV=production webpack",
     "clean": "rimraf dist",
