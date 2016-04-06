@@ -23,6 +23,7 @@ const basePlugins = [
 const devPlugins = [];
 
 const prodPlugins = [
+  new webpack.optimize.DedupePlugin(),
   new webpack.optimize.OccurrenceOrderPlugin(true),
   new webpack.optimize.UglifyJsPlugin({
     mangle: false,
