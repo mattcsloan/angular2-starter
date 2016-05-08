@@ -47,7 +47,8 @@ const entries = {
     'es6-promise',
     'angular2/bundles/angular2-polyfills',
     'angular2/platform/browser',
-    'angular2/core'
+    'angular2/core',
+    'rxjs'
   ]
 };
 
