@@ -2,18 +2,18 @@
   "compileOnSave": false,
   "buildOnSave": false,
   "compilerOptions": {
+    "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
-    "target": "es5",
+    "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "noImplicitAny": false,
     "removeComments": false,
-    "sourceMap": true
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true
   },
   "exclude": [
     "node_modules",
-    "dist",
     "typings/main",
     "typings/main.d.ts"
   ]

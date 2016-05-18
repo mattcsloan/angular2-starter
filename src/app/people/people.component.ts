@@ -1,4 +1,4 @@
-import { Component, OnInit } from 'angular2/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { PeopleService } from './people.service';
@@ -8,7 +8,7 @@ import { Person } from './person.model';
   selector: 'sw-people',
   template: require('./people.component.html'),
   styles: [
-    require('./people.component.scss')
+    require('./people.component.css')
   ],
   providers: [ PeopleService ]
 })
