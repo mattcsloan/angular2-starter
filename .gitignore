@@ -37,3 +37,6 @@ dist
 
 # Typescript type definitions
 typings
+
+# OS X garbage
+.DS_Store

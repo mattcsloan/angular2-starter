@@ -1,12 +1,13 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var helpers = require('./helpers');
 
 module.exports = {
   entry: {
-    polyfills: '../src/polyfills',
-    vendor: '../src/vendor',
-    app: '../src/main'
+    polyfills: './src/polyfills',
+    vendor: './src/vendor',
+    app: './src/main'
   },
 
   resolve: {
@@ -29,12 +30,12 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        exclude: '',
+        exclude: helpers.root('src', 'app'),
         loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
       },
       {
         test: /\.css$/,
-        include: '',
+        include: helpers.root('src', 'app'),
         loader: 'raw'
       }
     ]
@@ -45,7 +46,7 @@ module.exports = {
       name: ['app', 'vendor', 'polyfills']
     }),
     new HtmlWebpackPlugin({
-      template: '../src/index.html'
+      template: 'src/index.html'
     })
   ]
 };

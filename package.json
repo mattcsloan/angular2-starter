@@ -23,7 +23,6 @@
   "devDependencies": {
     "awesome-typescript-loader": "0.17.0",
     "codelyzer": "0.0.19",
-    "cross-env": "1.0.7",
     "css-loader": "0.23.1",
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.8.5",
