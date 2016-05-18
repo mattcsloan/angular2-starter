@@ -7,7 +7,7 @@ if (process.env.ENV === 'production') {
 } else {
   // Development
 
-  Error['stackTraceLimit'] = Infinity;
+  (<any>Error).stackTraceLimit = Infinity;
 
   require('zone.js/dist/long-stack-trace-zone');
 }
