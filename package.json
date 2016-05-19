@@ -9,8 +9,8 @@
     "clean": "rimraf dist",
     "postinstall": "typings install",
     "lint": "npm run lint:js && npm run lint:css",
-    "lint:js": "tslint './src/**/*.ts'",
-    "lint:css": "sass-lint src/**/*.scss",
+    "lint:js": "tslint \"./src/**/*.ts\" --force --format verbose",
+    "lint:css": "sass-lint \"src/**/*.scss\" --verbose",
     "wrap": "npm shrinkwrap --dev"
   },
   "repository": {

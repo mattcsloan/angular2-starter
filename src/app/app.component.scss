@@ -1,7 +1,11 @@
+$red: #f00;
+$blue: #00f;
+
+
 h1 {
-  color: #f00;
+  color: $red;
 }
 
 h2 {
-  color: #00f;
+  color: $blue;
 }
