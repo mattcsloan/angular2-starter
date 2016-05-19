@@ -8,7 +8,7 @@ import { PeopleComponent } from './people/people.component';
   selector: 'sw-app',
   template: require('./app.component.html'),
   styles: [
-    require('./app.component.css')
+    require('./app.component.scss')
   ],
   directives: [ PeopleComponent ]
 })

@@ -8,7 +8,7 @@ import { Person } from './person.model';
   selector: 'sw-people',
   template: require('./people.component.html'),
   styles: [
-    require('./people.component.css')
+    require('./people.component.scss')
   ],
   providers: [ PeopleService ]
 })

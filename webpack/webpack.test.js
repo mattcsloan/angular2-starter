@@ -20,7 +20,7 @@ module.exports = {
         loader: 'null'
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         loader: 'null'
       }
     ]
