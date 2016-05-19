@@ -8,7 +8,9 @@
     "build": "npm run clean && webpack --config webpack/webpack.prod.js --progress --profile --bail",
     "clean": "rimraf dist",
     "postinstall": "typings install",
-    "lint": "tslint './src/**/*.ts'",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:js": "tslint './src/**/*.ts'",
+    "lint:css": "sass-lint src/**/*.scss",
     "wrap": "npm shrinkwrap --dev"
   },
   "repository": {
@@ -42,6 +44,7 @@
     "postcss-loader": "0.9.1",
     "raw-loader": "0.5.1",
     "rimraf": "2.5.2",
+    "sass-lint": "1.7.0",
     "sass-loader": "3.2.0",
     "style-loader": "0.13.1",
     "to-string-loader": "1.1.4",
