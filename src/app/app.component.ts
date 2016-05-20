@@ -15,13 +15,16 @@ import {
   SpeciesComponent
 } from './components';
 
+import { SwapiService } from './services';
+
 @Component({
   selector: 'sw-app',
   template: require('./app.component.html'),
   styles: [
     require('./app.component.scss')
   ],
-  directives: [  ROUTER_DIRECTIVES, HeaderComponent, NavbarComponent ]
+  directives: [  ROUTER_DIRECTIVES, HeaderComponent, NavbarComponent ],
+  providers: [ SwapiService ]
 })
 @Routes([
   new Route({ path: '/', component: HomeComponent }),
