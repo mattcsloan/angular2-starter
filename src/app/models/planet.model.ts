@@ -1,4 +1,6 @@
-export class Planet {
+import { SwapiEntity } from './swapi-entity.model';
+
+export class Planet extends SwapiEntity {
   public name: string;
   public rotation_period: string;
   public orbital_period: string;
@@ -10,7 +12,4 @@ export class Planet {
   public population: string;
   public residents: string[];
   public films: string[];
-  public created: string;
-  public edited: string;
-  public url: string;
 }

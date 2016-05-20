@@ -1,4 +1,6 @@
-export class Person {
+import { SwapiEntity } from './swapi-entity.model';
+
+export class Person extends SwapiEntity {
   public name: string;
   public height: string;
   public mass: string;
@@ -12,7 +14,4 @@ export class Person {
   public species: string[];
   public vehicles: string[];
   public starships: string[];
-  public created: string;
-  public edited: string;
-  public url: string;
 }

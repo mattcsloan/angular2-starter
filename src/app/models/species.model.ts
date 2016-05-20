@@ -1,4 +1,6 @@
-export class Species {
+import { SwapiEntity } from './swapi-entity.model';
+
+export class Species extends SwapiEntity {
   public name: string;
   public classification: string;
   public designation: string;
@@ -11,7 +13,4 @@ export class Species {
   public language: string;
   public people: string[];
   public films: string[];
-  public created: string;
-  public edited: string;
-  public url: string;
 }

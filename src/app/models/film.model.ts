@@ -1,4 +1,6 @@
-export class Film {
+import { SwapiEntity } from './swapi-entity.model';
+
+export class Film extends SwapiEntity {
   public title: string;
   public episode_id: string;
   public opening_crawl: string;
@@ -10,7 +12,4 @@ export class Film {
   public starships: string[];
   public vehicles: string[];
   public species: string[];
-  public created: string;
-  public edited: string;
-  public url: string;
 }
