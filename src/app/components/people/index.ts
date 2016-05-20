@@ -1,1 +1,1 @@
-export { PeopleComponent } from './people.component';
+export * from './people.component';

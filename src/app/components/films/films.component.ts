@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { FilmsService } from './films.service';
-import { Film } from './film.model';
+import { FilmsService } from '../../services';
+import { Film } from '../../models';
 
 @Component({
   selector: 'sw-films',

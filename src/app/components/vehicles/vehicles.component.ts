@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { VehiclesService } from './vehicles.service';
-import { Vehicle } from './vehicle.model';
+import { VehiclesService } from '../../services';
+import { Vehicle } from '../../models';
 
 @Component({
   selector: 'sw-vehicles',

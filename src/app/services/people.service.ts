@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { Person } from './person.model';
+import { Person } from '../models';
 
 @Injectable()
 export class PeopleService {

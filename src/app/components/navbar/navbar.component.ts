@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 
-import { NavbarService } from './navbar.service';
-import { NavItem } from './navItem.model';
+import { NavbarService } from '../../services';
+import { NavItem } from '../../models';
 
 @Component({
   selector: 'sw-navbar',

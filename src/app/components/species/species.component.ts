@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { SpeciesService } from './species.service';
-import { Species } from './species.model';
+import { SpeciesService } from '../../services';
+import { Species } from '../../models';
 
 @Component({
   selector: 'sw-species',

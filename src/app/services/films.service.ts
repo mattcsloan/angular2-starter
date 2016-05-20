@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { Planet } from './planet.model';
+import { Film } from '../models';
 
 @Injectable()
-export class PlanetsService {
+export class FilmsService {
   constructor() { }
 
   // TODO: replace w/ http
-  public getAll(): Observable<Planet[]> {
+  public getAll(): Observable<Film[]> {
     return Observable.of([]);
   }
 }

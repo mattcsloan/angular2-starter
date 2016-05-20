@@ -1,1 +1,1 @@
-export { PlanetsComponent } from './planets.component';
+export * from './planets.component';

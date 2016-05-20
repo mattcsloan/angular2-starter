@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { NavItem } from './navItem.model';
+import { NavItem } from '../models';
 
 @Injectable()
 export class NavbarService {
@@ -13,8 +13,8 @@ export class NavbarService {
         link: 'planets'
       },
       {
-        label: 'Spaceships',
-        link: 'spaceships'
+        label: 'Starships',
+        link: 'starships'
       },
       {
         label: 'Vehicles',

@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { Vehicle } from './vehicle.model';
+import { Starship } from '../models';
 
 @Injectable()
-export class VehiclesService {
+export class StarshipsService {
   constructor() { }
 
   // TODO: replace w/ http
-  public getAll(): Observable<Vehicle[]> {
+  public getAll(): Observable<Starship[]> {
     return Observable.of([]);
   }
 }

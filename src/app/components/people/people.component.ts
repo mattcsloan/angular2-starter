@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { PeopleService } from './people.service';
-import { Person } from './person.model';
+import { PeopleService } from '../../services';
+import { Person } from '../../models';
 
 @Component({
   selector: 'sw-people',

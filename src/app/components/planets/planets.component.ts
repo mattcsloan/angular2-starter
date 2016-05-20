@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { PlanetsService } from './planets.service';
-import { Planet } from './planet.model';
+import { PlanetsService } from '../../services';
+import { Planet } from '../../models';
 
 @Component({
   selector: 'sw-planets',

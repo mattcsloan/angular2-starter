@@ -1,1 +1,1 @@
-export { FilmsComponent } from './films.component';
+export * from './films.component';
