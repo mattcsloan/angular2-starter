@@ -9,4 +9,9 @@ import '@angular/router';
 // RxJS
 import 'rxjs';
 
+// Angular2 Material
+import '@angular2-material/core';
+import '@angular2-material/toolbar';
+import '@angular2-material/icon';
+
 // other vendors here...
