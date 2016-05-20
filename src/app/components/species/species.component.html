@@ -1,1 +1,31 @@
 <h2>Species</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Classification</th>
+      <th>Designation</th>
+      <th>Average Height</th>
+      <th>Skin Colors</th>
+      <th>Hair Colors</th>
+      <th>Eye Colors</th>
+      <th>Average Lifespan</th>
+      <th>Homeworld</th>
+      <th>Language</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let species of species$ | async">
+      <td>{{ species.name }}</td>
+      <td>{{ species.classification }}</td>
+      <td>{{ species.designation }}</td>
+      <td>{{ species.average_height }}</td>
+      <td>{{ species.skin_colors }}</td>
+      <td>{{ species.hair_colors }}</td>
+      <td>{{ species.eye_colors }}</td>
+      <td>{{ species.average_lifespan }}</td>
+      <td>{{ species.homeworld }}</td>
+      <td>{{ species.language }}</td>
+    </tr>
+  </tbody>
+</table>

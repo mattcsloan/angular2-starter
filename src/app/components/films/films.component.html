@@ -1,1 +1,21 @@
 <h2>Films</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Episode Id</th>
+      <th>Director</th>
+      <th>Producer</th>
+      <th>Release Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let film of films$ | async">
+      <td>{{ film.title }}</td>
+      <td>{{ film.episode_id }}</td>
+      <td>{{ film.director }}</td>
+      <td>{{ film.producer }}</td>
+      <td>{{ film.release_date }}</td>
+    </tr>
+  </tbody>
+</table>
