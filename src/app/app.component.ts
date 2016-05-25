@@ -1,5 +1,10 @@
-import { Component } from '@angular/core';
-import { Route, Routes, ROUTER_DIRECTIVES } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { RouteConfig, ROUTER_DIRECTIVES } from '@angular/router-deprecated';
+
+import { MD_SIDENAV_DIRECTIVES } from '@angular2-material/sidenav';
+import { MdButton } from '@angular2-material/button';
+import { MdToolbar } from '@angular2-material/toolbar';
+import { MdIcon } from '@angular2-material/icon';
 
 import {
   HeaderComponent,
@@ -13,7 +18,8 @@ import {
   SpeciesComponent
 } from './components';
 
-import { SwapiService } from './services';
+import { SwapiService, NavbarService } from './services';
+import { NavItem } from './models';
 
 @Component({
   selector: 'sw-app',
@@ -21,18 +27,30 @@ import { SwapiService } from './services';
   styles: [
     require('./app.component.scss')
   ],
-  directives: [  ROUTER_DIRECTIVES, HeaderComponent, NavbarComponent ],
-  providers: [ SwapiService ]
+  directives: [
+    ROUTER_DIRECTIVES,
+    MD_SIDENAV_DIRECTIVES,
+    MdButton,
+    MdToolbar,
+    MdIcon
+  ],
+  providers: [ SwapiService, NavbarService ]
 })
-@Routes([
-  new Route({ path: '/', component: HomeComponent }),
-  new Route({ path: '/planets', component: PlanetsComponent }),
-  new Route({ path: '/starships', component: StarshipsComponent }),
-  new Route({ path: '/vehicles', component: VehiclesComponent }),
-  new Route({ path: '/people', component: PeopleComponent }),
-  new Route({ path: '/films', component: FilmsComponent }),
-  new Route({ path: '/species', component: SpeciesComponent })
+@RouteConfig([
+  { name: 'Home', path: '/', component: HomeComponent, useAsDefault: true },
+  { name: 'Planets', path: '/planets', component: PlanetsComponent },
+  { name: 'Starships', path: '/starships', component: StarshipsComponent },
+  { name: 'Vehicles', path: '/vehicles', component: VehiclesComponent },
+  { name: 'People', path: '/people', component: PeopleComponent },
+  { name: 'Films', path: '/films', component: FilmsComponent },
+  { name: 'Species', path: '/species', component: SpeciesComponent }
 ])
-export class AppComponent {
-  constructor() { }
+export class AppComponent implements OnInit {
+  public navItems: NavItem[];
+
+  constructor(private navbarService: NavbarService) { }
+
+  ngOnInit() {
+    this.navItems = this.navbarService.getNavItems();
+  }
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
 
 import { NavbarService } from '../../services';
 import { NavItem } from '../../models';
@@ -10,8 +9,7 @@ import { NavItem } from '../../models';
   styles: [
     require('./navbar.component.scss')
   ],
-  providers: [ NavbarService ],
-  directives: [ ROUTER_DIRECTIVES ]
+  providers: [ NavbarService ]
 })
 export class NavbarComponent implements OnInit {
   public navItems: NavItem[];

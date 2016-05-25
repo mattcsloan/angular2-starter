@@ -10,27 +10,27 @@ export class NavbarService {
     return [
       {
         label: 'Planets',
-        link: 'planets'
+        routeName: 'Planets'
       },
       {
         label: 'Starships',
-        link: 'starships'
+        routeName: 'Starships'
       },
       {
         label: 'Vehicles',
-        link: 'vehicles'
+        routeName: 'Vehicles'
       },
       {
         label: 'People',
-        link: 'people'
+        routeName: 'People'
       },
       {
         label: 'Films',
-        link: 'films'
+        routeName: 'Films'
       },
       {
         label: 'Species',
-        link: 'species'
+        routeName: 'Species'
       }
     ];
   }

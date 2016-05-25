@@ -1,4 +1,4 @@
 export class NavItem {
   public label: string;
-  public link: string;
+  public routeName: string;
 }
