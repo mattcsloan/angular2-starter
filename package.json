@@ -53,9 +53,9 @@
     "tslint": "3.10.2",
     "typescript": "1.8.10",
     "typings": "1.0.4",
-    "webpack": "1.13.0",
+    "webpack": "1.13.1",
     "webpack-dev-server": "1.14.1",
-    "webpack-merge": "0.12.0"
+    "webpack-merge": "0.13.0"
   },
   "dependencies": {
     "@angular/common": "2.0.0-rc.1",
@@ -68,7 +68,7 @@
     "@angular2-material/core": "2.0.0-alpha.4",
     "@angular2-material/icon": "2.0.0-alpha.4",
     "@angular2-material/toolbar": "2.0.0-alpha.4",
-    "angular2-in-memory-web-api": "0.0.7",
+    "angular2-in-memory-web-api": "0.0.10",
     "es6-shim": "0.35.0",
     "normalize.css": "4.1.1",
     "reflect-metadata": "0.1.2",
