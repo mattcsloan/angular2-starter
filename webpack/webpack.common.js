@@ -30,12 +30,12 @@ module.exports = {
         loader: 'file?name=assets/[name].[hash].[ext]'
       },
       {
-        test: /\.scss$/,
+        test: /\.s?css$/,
         exclude: helpers.root('src', 'app'),
         loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss?sourceMap?sass?sourceMap')
       },
       {
-        test: /\.scss$/,
+        test: /\.s?css$/,
         include: helpers.root('src', 'app'),
         loaders: ['to-string', 'css?sourceMap', 'postcss?sourceMap', 'sass?sourceMap']
       }

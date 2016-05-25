@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { Route, Routes, ROUTER_DIRECTIVES } from '@angular/router';
 
-// import app wide css here
-
 import {
   HeaderComponent,
   NavbarComponent,

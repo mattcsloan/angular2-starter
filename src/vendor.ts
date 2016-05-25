@@ -15,3 +15,4 @@ import '@angular2-material/toolbar';
 import '@angular2-material/icon';
 
 // other vendors here...
+import '../node_modules/normalize.css/normalize.css';

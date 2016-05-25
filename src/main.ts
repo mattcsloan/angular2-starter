@@ -5,6 +5,9 @@ import { ROUTER_PROVIDERS } from '@angular/router';
 
 import { MdIconRegistry } from '@angular2-material/icon';
 
+// global styles
+import './main.scss';
+
 import { AppComponent } from './app/app.component';
 
 if (process.env.ENV === 'production') {
