@@ -7,8 +7,6 @@ import { MdToolbar } from '@angular2-material/toolbar';
 import { MdIcon } from '@angular2-material/icon';
 
 import {
-  HeaderComponent,
-  NavbarComponent,
   HomeComponent,
   PlanetsComponent,
   StarshipsComponent,

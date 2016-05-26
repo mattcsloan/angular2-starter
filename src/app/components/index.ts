@@ -1,7 +1,5 @@
 export * from './films';
-export * from './header';
 export * from './home';
-export * from './navbar';
 export * from './people';
 export * from './planets';
 export * from './species';
