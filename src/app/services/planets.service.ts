@@ -1,28 +1,19 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs';
 
-import { Planet } from '../models';
-import { SwapiCollection } from '../models';
+import { Planet, SwapiCollection } from '../models';
+import { SwapiService } from '../services';
 
 @Injectable()
 export class PlanetsService {
-  private planetsUrl = 'https://swapi.co/api/planets';
+  private planetsResource = 'planets';
 
-  constructor(private http: Http) { }
+  constructor(private swapiService: SwapiService) { }
 
   public getAll(page: number = 1): Observable<Planet[]> {
-    return this.http.get(`${this.planetsUrl}?page=${page}`)
-      .map((res: Response) => {
-        const body: SwapiCollection<Planet> = res.json();
-        return body.results;
-      })
-      .catch((error: any) => {
-        const errMsg = (error.message) ? error.message :
-          error.status ? `${error.status} - ${error.statusText}` :
-          'Server Error';
-        console.error(errMsg);
-        return Observable.throw(errMsg);
+    return this.swapiService.getAll<Planet>(this.planetsResource, page)
+      .map((collection: SwapiCollection<Planet>) => {
+        return collection.results;
       });
   }
 }

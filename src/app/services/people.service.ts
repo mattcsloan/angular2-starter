@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { Person } from '../models';
-import { SwapiCollection } from '../models';
+import { Person, SwapiCollection } from '../models';
 import { SwapiService } from '../services';
 
 @Injectable()

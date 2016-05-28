@@ -7,7 +7,7 @@ import { SwapiCollection, SwapiEntity } from '../models';
 
 @Injectable()
 export class SwapiService {
-  private swapiUrl: string = 'https://swapi.co/api/';
+  private swapiUrl: string = 'http://swapi.co/api/';
 
   constructor(private http: Http) { }
 
