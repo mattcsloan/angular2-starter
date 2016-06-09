@@ -1,0 +1,23 @@
+<md-sidenav-layout>
+  <md-sidenav #sidenav>
+    <ul>
+      <li *ngFor="let navItem of navItems" (click)="sidenav.close()">
+        <a [routerLink]="[navItem.routeName]">
+          {{ navItem.label }}
+        </a>
+      </li>
+    </ul>
+  </md-sidenav>
+
+  <md-toolbar color="primary">
+    <button md-icon-button (click)="sidenav.open()" title="Open menu">
+      <md-icon>menu</md-icon>
+    </button>
+    <h1>SWAPI</h1>
+    <a md-icon-button href="https://github.com/ecozoic/angular2-starter" class="code-link" title="View source code">
+      <md-icon>code</md-icon>
+    </a>
+  </md-toolbar>
+
+  <router-outlet></router-outlet>
+</md-sidenav-layout>
