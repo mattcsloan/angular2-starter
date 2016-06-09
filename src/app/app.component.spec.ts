@@ -3,14 +3,20 @@ import {
   inject,
   describe,
   beforeEachProviders,
-  expect
+  expect,
 } from '@angular/core/testing';
 
+import {
+  provide
+} from '@angular/core';
+
 import { AppComponent } from './app.component';
+import { NavbarService } from './services';
 
 describe('App', () => {
   beforeEachProviders(() => [
-    AppComponent
+    AppComponent,
+    provide(NavbarService, { useClass: NavbarService })
   ]);
 
   it('should work', inject([AppComponent], (app: AppComponent) => {
