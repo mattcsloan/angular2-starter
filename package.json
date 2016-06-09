@@ -8,12 +8,14 @@
     "build": "npm run clean && webpack --config webpack/webpack.prod.js --progress --profile --bail",
     "serve": "http-server ./dist",
     "clean": "rimraf dist",
+    "clean:docs": "rimraf doc",
     "postinstall": "typings install",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "tslint \"./src/**/*.ts\" --force --format verbose",
     "lint:css": "sass-lint \"src/**/*.scss\" --verbose",
     "wrap": "npm shrinkwrap --dev",
-    "typings": "typings"
+    "typings": "typings",
+    "docs": "npm run clean:docs && typedoc --options typedoc.json --exclude \"**/*.spec.ts\" ./src/"
   },
   "repository": {
     "type": "git",
@@ -52,6 +54,7 @@
     "style-loader": "0.13.1",
     "to-string-loader": "1.1.4",
     "tslint": "3.11.0",
+    "typedoc": "0.4.2",
     "typescript": "1.8.10",
     "typings": "1.0.4",
     "webpack": "1.13.1",
