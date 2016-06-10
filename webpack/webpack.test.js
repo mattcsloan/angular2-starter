@@ -1,3 +1,5 @@
+var helpers = require('./helpers');
+
 module.exports = {
   devtool: 'inline-source-map',
 
@@ -9,7 +11,7 @@ module.exports = {
     loaders: [
       {
         test: /\.ts$/,
-        loader: 'awesome-typescript'
+        loader: 'awesome-typescript?sourceMap=false&inlineSourceMap=true'
       },
       {
         test: /\.html$/,
@@ -22,6 +24,15 @@ module.exports = {
       {
         test: /\.s?css$/,
         loader: 'null'
+      }
+    ],
+
+    postLoaders: [
+      {
+        test: /\.ts$/,
+        loader: 'istanbul-instrumenter-loader',
+        include: helpers.root('src'),
+        exclude: [/\.spec\.ts$/, /\.e2e\.ts$/, /node_modules/]
       }
     ]
   }
