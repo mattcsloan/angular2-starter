@@ -31,6 +31,11 @@ npm test
 
 This will execute unit tests powered by Karma and Jasmine.
 
+To run Protractor e2e tests, ensure the app is running with either ```npm start``` or ```npm serve``` and then run:
+```
+npm run e2e
+```
+
 ## Tools & Features
 * Build powered by Webpack
 * Linting with tslint (enhanced with Codelyzer) and sass-lint
