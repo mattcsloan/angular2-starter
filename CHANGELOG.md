@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.3.1] - 2016.06-18
+### Added
+- Webpack config validation via webpack-validator
+- Added awesome-typescript-loader's ForkChecker plugin to webpack plugins
+
+### Changed
+- Updated many dependencies to latest versions
+- Updated readme roadmap
+
 ## [0.3.0] - 2016-06-10
 ### Added
 - Code coverage of Typescript files using Istanbul
