@@ -5,6 +5,7 @@ import { MD_SIDENAV_DIRECTIVES } from '@angular2-material/sidenav';
 import { MdButton } from '@angular2-material/button';
 import { MdToolbar } from '@angular2-material/toolbar';
 import { MdIcon } from '@angular2-material/icon';
+import { MD_RIPPLE_DIRECTIVES } from '@angular2-material/core';
 
 import {
   HomeComponent,
@@ -30,7 +31,8 @@ import { NavItem } from './models';
     MD_SIDENAV_DIRECTIVES,
     MdButton,
     MdToolbar,
-    MdIcon
+    MdIcon,
+    MD_RIPPLE_DIRECTIVES
   ],
   providers: [ SwapiService, NavbarService ]
 })

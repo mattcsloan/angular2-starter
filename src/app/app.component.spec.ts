@@ -1,9 +1,6 @@
 import {
-  it,
   inject,
-  describe,
-  beforeEachProviders,
-  expect,
+  addProviders,
 } from '@angular/core/testing';
 
 import {
@@ -14,10 +11,10 @@ import { AppComponent } from './app.component';
 import { NavbarService } from './services';
 
 describe('App', () => {
-  beforeEachProviders(() => [
+  beforeEach(() => addProviders([
     AppComponent,
     provide(NavbarService, { useClass: NavbarService })
-  ]);
+  ]));
 
   it('should work', inject([AppComponent], (app: AppComponent) => {
     // real tests here
