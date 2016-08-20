@@ -2,7 +2,14 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
-## [0.3.1] - 2016.06-18
+## [0.4.0] - 2016-08-20
+### Changed
+- Updated Angular 2 to RC.5
+- Updated other dependencies (Angular 2 Material, Protractor, Karma, etc.)
+- Updated Node/NPM versions to 6.4.0/3.10.3
+- Updated README
+
+## [0.3.1] - 2016-06-18
 ### Added
 - Webpack config validation via webpack-validator
 - Added awesome-typescript-loader's ForkChecker plugin to webpack plugins
