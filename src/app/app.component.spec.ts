@@ -1,23 +1,32 @@
-import {
-  inject,
-  addProviders,
-} from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterModule } from '@angular/router';
 
-import {
-  provide
-} from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NavbarService } from './services';
 
-describe('App', () => {
-  beforeEach(() => addProviders([
-    AppComponent,
-    provide(NavbarService, { useClass: NavbarService })
-  ]));
+let fixture: ComponentFixture<AppComponent>;
+let component: AppComponent;
 
-  it('should work', inject([AppComponent], (app: AppComponent) => {
-    // real tests here
+describe('AppComponent', () => {
+  beforeEach(() => {
+    const navbarServiceStub: NavbarService = {
+      getNavItems: () => []
+    };
+
+    TestBed.configureTestingModule({
+      imports: [
+        RouterModule.forRoot([])
+      ],
+      declarations: [ AppComponent ],
+      providers: [{ provide: NavbarService, useValue: navbarServiceStub }]
+    });
+
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
+  });
+
+  it('should work', () => {
     expect(2).toBe(2);
-  }));
+  });
 });

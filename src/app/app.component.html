@@ -1,23 +1,24 @@
-<md-sidenav-layout>
-  <md-sidenav #sidenav>
+<main>
+  <aside>
     <ul>
-      <li *ngFor="let navItem of navItems" (click)="sidenav.close()">
-        <a [routerLink]="[navItem.routeName]">
+      <li *ngFor="let navItem of navItems">
+        <a [routerLink]="navItem.path">
           {{ navItem.label }}
         </a>
       </li>
     </ul>
-  </md-sidenav>
+  </aside>
 
-  <md-toolbar color="primary">
-    <button md-icon-button (click)="sidenav.open()" title="Open menu">
-      <md-icon>menu</md-icon>
+  <nav>
+    <button>
+      menu
     </button>
     <h1>SWAPI</h1>
-    <a md-icon-button href="https://github.com/ecozoic/angular2-starter" class="code-link" title="View source code">
-      <md-icon>code</md-icon>
+    <a href="https://github.com/ecozoic/angular2-starter" title="View source code">
+      code
     </a>
-  </md-toolbar>
+  </nav>
 
+  <!-- Routed views go here -->
   <router-outlet></router-outlet>
-</md-sidenav-layout>
+</main>
