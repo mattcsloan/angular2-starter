@@ -2,6 +2,28 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.5.0] - 2016-10-02
+### Added
+- Added linting to webpack build (tslint, sasslint)
+- Added Angular forms module
+- Added PageNotFound component to handle 404s while routing
+
+### Changed
+- Updated to Angular 2.0.1
+- Updated dependencies to latest versions
+- Replaced deprecated Angular router w/ router 3.0.1
+- Refactored bootstrapping to use ngModules
+- Updated unit tests to use TestBeds
+- Replaced es6-shim/reflect-metadata with core-js
+
+### Removed
+- Removed Angular Material (at least for now)
+- Removed Webpack helpers.js
+- Removed angular2-in-memory-webapi and webpack-validation dependencies
+
+### Fixed
+- Properly added tsconfig.json for e2e tests project
+
 ## [0.4.0] - 2016-08-20
 ### Changed
 - Updated Angular 2 to RC.5

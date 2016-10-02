@@ -11,14 +11,20 @@ export class SwapiService {
 
   constructor(private http: Http) { }
 
-  public getAll<T extends SwapiEntity>(resource: string, page: number): Observable<SwapiCollection<T>> {
+  public getAll<T extends SwapiEntity>(
+    resource: string,
+    page: number
+  ): Observable<SwapiCollection<T>> {
     return this.http.get(this.getCollectionUrl(resource, page))
       .map((response: Response) => {
         return <SwapiCollection<T>>response.json();
       });
   }
 
-  public get<T extends SwapiEntity>(resource: string, id: number): Observable<T> {
+  public get<T extends SwapiEntity>(
+    resource: string,
+    id: number
+  ): Observable<T> {
     return this.http.get(this.getEntityUrl(resource, id))
       .map((response: Response) => {
         return <T>response.json();

@@ -1,9 +1,10 @@
+var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
+var SassLintPlugin = require('sasslint-webpack-plugin');
 var cssNext = require('postcss-cssnext');
-var helpers = require('./helpers');
 
 module.exports = {
   entry: {
@@ -17,6 +18,12 @@ module.exports = {
   },
 
   module: {
+    preLoaders: [
+      {
+        test: /\.ts$/,
+        loader: 'tslint'
+      }
+    ],
     loaders: [
       {
         test: /\.ts$/,
@@ -32,18 +39,21 @@ module.exports = {
       },
       {
         test: /\.s?css$/,
-        exclude: helpers.root('src', 'app'),
+        exclude: path.resolve(__dirname, '../src/app'),
         loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss?sourceMap?sass?sourceMap')
       },
       {
         test: /\.s?css$/,
-        include: helpers.root('src', 'app'),
+        include: path.resolve(__dirname, '../src/app'),
         loaders: ['to-string', 'css?sourceMap', 'postcss?sourceMap', 'sass?sourceMap']
       }
     ]
   },
 
   plugins: [
+    new SassLintPlugin({
+      glob: 'src/**/*.s?(a|c)ss'
+    }),
     new ForkCheckerPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor', 'polyfills']

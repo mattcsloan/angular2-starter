@@ -1,11 +1,11 @@
+var path = require('path');
 var SpecReporter = require('jasmine-spec-reporter');
-var helpers = require('./webpack/helpers');
 
 exports.config = {
   baseUrl: 'http://localhost:8080',
 
   specs: [
-    helpers.root('e2e/**/*.e2e.ts')
+    path.resolve(__dirname, './e2e/**/*.e2e.ts')
   ],
 
   framework: 'jasmine',
@@ -28,7 +28,9 @@ exports.config = {
   },
 
   beforeLaunch: function() {
-    require('ts-node').register();
+    require('ts-node').register({
+      project: 'e2e'
+    });
   },
 
   onPrepare: function() {

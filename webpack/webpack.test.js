@@ -1,4 +1,4 @@
-var helpers = require('./helpers');
+var path = require('path');
 
 module.exports = {
   devtool: 'inline-source-map',
@@ -23,7 +23,7 @@ module.exports = {
       },
       {
         test: /\.s?css$/,
-        loader: 'null'
+        loader: 'raw'
       }
     ],
 
@@ -31,7 +31,7 @@ module.exports = {
       {
         test: /\.ts$/,
         loader: 'istanbul-instrumenter-loader',
-        include: helpers.root('src'),
+        include: path.resolve(__dirname, '../src'),
         exclude: [/\.spec\.ts$/, /\.e2e\.ts$/, /node_modules/]
       }
     ]
