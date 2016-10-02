@@ -51,7 +51,8 @@ npm run e2e
 * TypeScript 2 / Awesome TypeScript Loader 2
 * Hot module reloading
 * Docker/Heroku support
-* Sample authentication
+* Sample authentication via Firebase
+* Lazy routing
 
 ## Other Examples
 In addition to the official documentation, these other projects are great resources to see alternative webpack setups for Angular 2.

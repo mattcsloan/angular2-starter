@@ -1,4 +1,5 @@
-// this guy needs to be exported before services in this barrel that depend on it
+// this guy needs to be exported before 
+// services in this barrel that depend on it
 // https://github.com/angular/angular/issues/8704#issuecomment-220732984
 export * from './swapi.service';
 

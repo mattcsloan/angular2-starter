@@ -30,7 +30,7 @@ module.exports = function(config) {
       }]
     },
 
-    reporters: ['nyan'],
+    reporters: ['coverage', 'nyan'],
 
     port: 9876,
     colors: true,
