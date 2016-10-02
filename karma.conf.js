@@ -16,10 +16,6 @@ module.exports = function(config) {
 
     webpack: webpackConfig,
 
-    webpackMiddleware: {
-      stats: 'errors-only'
-    },
-
     webpackServer: {
       noInfo: true
     },
@@ -34,7 +30,7 @@ module.exports = function(config) {
       }]
     },
 
-    reporters: ['progress', 'coverage'],
+    reporters: ['coverage', 'nyan'],
 
     port: 9876,
     colors: true,
