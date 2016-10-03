@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.5.1] - 2016-10-03
+### Fixed
+- Fixed issue with sass-loader webpack setup
+
 ## [0.5.0] - 2016-10-02
 ### Added
 - Added linting to webpack build (tslint, sasslint)

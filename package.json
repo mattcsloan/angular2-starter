@@ -1,6 +1,6 @@
 {
   "name": "angular2-starter",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "A starter kit for Angular2+Rxjs UIs using Webpack",
   "scripts": {
     "start": "webpack-dev-server --inline --progress --port 8080",

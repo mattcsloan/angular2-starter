@@ -40,7 +40,7 @@ module.exports = {
       {
         test: /\.s?css$/,
         exclude: path.resolve(__dirname, '../src/app'),
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss?sourceMap?sass?sourceMap')
+        loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss?sourceMap!sass?sourceMap')
       },
       {
         test: /\.s?css$/,
