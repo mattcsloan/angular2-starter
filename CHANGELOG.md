@@ -2,6 +2,18 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.5.3] - 2016-10-12
+### Removed
+- Removed http-server dependency
+- Removed http-server references in README
+
+### Added
+- Added simple Koa static server
+- Added favicon
+
+### Changed
+- Changed webpack, karma, and protractor configs to use ES6 syntax
+
 ## [0.5.2] - 2016-10-12
 ### Removed
 - Removed SWAPI components, models, and services
