@@ -22,7 +22,7 @@ npm run build
 npm run serve
 ```
 
-This will generate minified assets in the dist directory and serve them up using http-server.
+This will generate minified assets in the dist directory and serve them up using a simple Koa server.
 
 ## Tests
 ```

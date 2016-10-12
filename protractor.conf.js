@@ -1,5 +1,5 @@
-var path = require('path');
-var SpecReporter = require('jasmine-spec-reporter');
+const path = require('path');
+const SpecReporter = require('jasmine-spec-reporter');
 
 exports.config = {
   baseUrl: 'http://localhost:8080',
@@ -27,13 +27,13 @@ exports.config = {
     }
   },
 
-  beforeLaunch: function() {
+  beforeLaunch: () => {
     require('ts-node').register({
       project: 'e2e'
     });
   },
 
-  onPrepare: function() {
+  onPrepare: () => {
     jasmine.getEnv().addReporter(new SpecReporter());
   },
 

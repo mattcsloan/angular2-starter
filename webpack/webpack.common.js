@@ -1,10 +1,10 @@
-var path = require('path');
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
-var SassLintPlugin = require('sasslint-webpack-plugin');
-var cssNext = require('postcss-cssnext');
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
+const SassLintPlugin = require('sasslint-webpack-plugin');
+const cssNext = require('postcss-cssnext');
 
 module.exports = {
   entry: {
@@ -34,8 +34,12 @@ module.exports = {
         loader: 'html'
       },
       {
-        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
+        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot)$/,
         loader: 'file?name=assets/[name].[hash].[ext]'
+      },
+      {
+        test: /\.ico$/,
+        loader: 'file?name=[name].[ext]'
       },
       {
         test: /\.s?css$/,
@@ -63,7 +67,7 @@ module.exports = {
     })
   ],
 
-  postcss: function() {
+  postcss: () => {
     return [
       cssNext
     ];
