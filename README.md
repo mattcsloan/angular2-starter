@@ -48,13 +48,11 @@ npm run e2e
 
 ## Roadmap
 * Babel to support ES7 features like async/await
-* @typings
 * Webpack 2 + tree-shaking minification
 * Hot module reloading
 * Docker/Heroku support
 * Sample authentication via Firebase
 * Lazy routing
-* Yarn
 
 ## Other Examples
 In addition to the official documentation, these other projects are great resources to see alternative webpack setups for Angular 2.

@@ -4,6 +4,6 @@ export class AppPage {
   }
 
   getHeaderText() {
-    return element(by.css('sw-app h2')).getText();
+    return element(by.css('my-app h2')).getText();
   }
 }

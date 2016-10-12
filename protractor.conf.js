@@ -1,3 +1,4 @@
+require('ts-node/register');
 const path = require('path');
 const SpecReporter = require('jasmine-spec-reporter');
 
@@ -5,17 +6,19 @@ exports.config = {
   baseUrl: 'http://localhost:8080',
 
   specs: [
-    path.resolve(__dirname, './e2e/**/*.e2e.ts')
+    path.resolve(__dirname, './src/**/*.e2e.ts')
   ],
 
   framework: 'jasmine',
 
-  allScriptsTimeout: 11000,
+  allScriptsTimeout: 110000,
 
   jasmineNodeOpts: {
+    showTiming: true,
     showColors: true,
-    defaultTimeoutInterval: 30000,
-    print: function() { }
+    isVerbose: false,
+    includeStackTrace: false,
+    defaultTimeoutInterval: 400000
   },
 
   directConnect: true,
@@ -27,14 +30,9 @@ exports.config = {
     }
   },
 
-  beforeLaunch: () => {
-    require('ts-node').register({
-      project: 'e2e'
-    });
-  },
-
   onPrepare: () => {
     jasmine.getEnv().addReporter(new SpecReporter());
+    browser.ignoreSynchronization = true;
   },
 
   // Angular 2 configuration

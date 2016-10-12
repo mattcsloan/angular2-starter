@@ -8,9 +8,19 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true
+    "suppressImplicitAnyIndexErrors": true,
+    "types": [
+      "core-js",
+      "jasmine",
+      "node",
+      "protractor",
+      "selenium-webdriver"
+    ]
   },
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "awesomeTypescriptLoaderOptions": {
+    "forkChecker": true
+  }
 }

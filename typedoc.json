@@ -10,5 +10,6 @@
   "preserveConstEnums": "true",
   "stripInternal": "true",
   "suppressExcessPropertyErrors": "true",
+  "suppressImplicitAnyIndexErrors": "true",
   "module": "commonjs"
 }
