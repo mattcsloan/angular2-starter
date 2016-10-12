@@ -8,12 +8,6 @@ import { routing, appRoutingProviders } from './app.routing';
 
 import {
   HomeComponent,
-  PlanetsComponent,
-  StarshipsComponent,
-  VehiclesComponent,
-  PeopleComponent,
-  FilmsComponent,
-  SpeciesComponent,
   PageNotFoundComponent
 } from './components';
 
@@ -27,12 +21,6 @@ import {
   declarations: [
     AppComponent,
     HomeComponent,
-    PlanetsComponent,
-    StarshipsComponent,
-    VehiclesComponent,
-    PeopleComponent,
-    FilmsComponent,
-    SpeciesComponent,
     PageNotFoundComponent
   ],
   providers: [

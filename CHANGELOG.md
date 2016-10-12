@@ -2,6 +2,17 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.5.2] - 2016-10-12
+### Removed
+- Removed SWAPI components, models, and services
+- Removed SWAPI references in README
+- Removed mkdirp dependency
+
+### Changed
+- Changed codelyzer tslint prefix to "my" instead of "sw"
+- Updated to Angular 2.0.2
+- Updated several dependencies to latest versions
+
 ## [0.5.1] - 2016-10-03
 ### Fixed
 - Fixed issue with sass-loader webpack setup

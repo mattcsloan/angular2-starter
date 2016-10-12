@@ -1,6 +1,6 @@
 # angular2-starter
 
-This project is a scaffold to start new Angular 2 projects powered by Webpack. There are quite a few good examples out there but I wanted to make one that fit my specific needs and used my favorite tools. The webpack build process in this project is based on the awesome guide on the official Angular 2 documentation site [here](https://angular.io/docs/ts/latest/guide/webpack.html). The app itself is intentionally very simple and serves as a rudimentary API browser for [SWAPI](http://swapi.co/).
+This project is a scaffold to start new Angular 2 projects powered by Webpack. There are quite a few good examples out there but I wanted to make one that fit my specific needs and used my favorite tools. The webpack build process in this project is based on the awesome guide on the official Angular 2 documentation site [here](https://angular.io/docs/ts/latest/guide/webpack.html).
 
 ## Installation
 ```

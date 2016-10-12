@@ -1,24 +1,3 @@
 <main>
-  <aside>
-    <ul>
-      <li *ngFor="let navItem of navItems">
-        <a [routerLink]="navItem.path">
-          {{ navItem.label }}
-        </a>
-      </li>
-    </ul>
-  </aside>
-
-  <nav>
-    <button>
-      menu
-    </button>
-    <h1>SWAPI</h1>
-    <a href="https://github.com/ecozoic/angular2-starter" title="View source code">
-      code
-    </a>
-  </nav>
-
-  <!-- Routed views go here -->
   <router-outlet></router-outlet>
 </main>
