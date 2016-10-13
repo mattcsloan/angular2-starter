@@ -11,7 +11,7 @@ module.exports = {
     loaders: [
       {
         test: /\.ts$/,
-        loaders: ['babel', 'awesome-typescript?sourceMap=false&inlineSourceMap=true']
+        loaders: ['babel?sourceMaps=inline', 'awesome-typescript?sourceMap=false&inlineSourceMap=true']
       },
       {
         test: /\.html$/,

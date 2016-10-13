@@ -20,6 +20,6 @@ describe('AppComponent', () => {
   });
 
   it('should work', () => {
-    expect(2).toBe(2);
+    expect(component.test()).toBe(4);
   });
 });
