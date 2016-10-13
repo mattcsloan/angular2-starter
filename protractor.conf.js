@@ -5,17 +5,19 @@ exports.config = {
   baseUrl: 'http://localhost:8080',
 
   specs: [
-    path.resolve(__dirname, './e2e/**/*.e2e.ts')
+    path.resolve(__dirname, './src/**/*.e2e.ts')
   ],
 
   framework: 'jasmine',
 
-  allScriptsTimeout: 11000,
+  allScriptsTimeout: 110000,
 
   jasmineNodeOpts: {
+    showTiming: true,
     showColors: true,
-    defaultTimeoutInterval: 30000,
-    print: function() { }
+    isVerbose: false,
+    includeStackTrace: false,
+    defaultTimeoutInterval: 400000
   },
 
   directConnect: true,
@@ -27,14 +29,15 @@ exports.config = {
     }
   },
 
+  chromeDriver: `./node_modules/protractor/node_modules/webdriver-manager/selenium/chromedriver_2.24${process.platform.indexOf('win') === 0 ? '.exe' : ''}`,
+
   beforeLaunch: () => {
-    require('ts-node').register({
-      project: 'e2e'
-    });
+    require('ts-node').register();
   },
 
   onPrepare: () => {
     jasmine.getEnv().addReporter(new SpecReporter());
+    browser.ignoreSynchronization = true;
   },
 
   // Angular 2 configuration
