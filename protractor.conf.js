@@ -32,7 +32,12 @@ exports.config = {
   chromeDriver: `./node_modules/protractor/node_modules/webdriver-manager/selenium/chromedriver_2.24${process.platform.indexOf('win') === 0 ? '.exe' : ''}`,
 
   beforeLaunch: () => {
-    require('ts-node').register();
+    require('ts-node').register({
+      compilerOptions: {
+        target: 'es5',
+        module: 'commonjs'
+      }
+    });
   },
 
   onPrepare: () => {
