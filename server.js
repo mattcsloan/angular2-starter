@@ -17,7 +17,7 @@ app.use(logger());
 // TODO: caching
 app.use(serve('./dist'));
 
-app.use(function *() {
+app.use(function*() {
   yield send(this, 'dist/index.html');
 });
 
