@@ -17,7 +17,8 @@
     "clean:cov": "rimraf coverage",
     "predocs": "npm run clean:docs",
     "docs": "typedoc --options typedoc.json --exclude \"**/*.spec.ts\" ./src/",
-    "webdriver-update": "webdriver-manager update",
+    "webdriver": "webdriver-manager",
+    "webdriver-update": "webdriver-manager update --versions.chrome=2.24",
     "pree2e": "npm run webdriver-update",
     "e2e": "protractor",
     "rimraf": "rimraf"
@@ -38,7 +39,7 @@
     "@types/jasmine": "2.5.35",
     "@types/node": "6.0.45",
     "@types/protractor": "1.5.20",
-    "@types/selenium-webdriver": "2.44.29",
+    "@types/selenium-webdriver": "2.53.33",
     "awesome-typescript-loader": "2.2.4",
     "codelyzer": "0.0.28",
     "css-loader": "0.25.0",
