@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.7.1] - 2016-10-13
+### Changed
+- Updated Angular to 2.1.0
+- Added APP_BASE_HREF to providers for test module
+
 ## [0.7.0] - 2016-10-13
 ### Added
 - Added Babel transpilation step to Webpack build
