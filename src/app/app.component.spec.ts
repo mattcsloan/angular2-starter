@@ -22,4 +22,11 @@ describe('AppComponent', () => {
   it('should work', () => {
     expect(component.test()).toBe(4);
   });
+
+  it('should work async', (done: DoneFn) => {
+    component.testAsync().then((result: number) => {
+      expect(result).toBe(4);
+      done();
+    });
+  });
 });

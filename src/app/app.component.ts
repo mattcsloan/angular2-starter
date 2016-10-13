@@ -15,4 +15,8 @@ export class AppComponent implements OnInit {
   test() {
     return 4;
   }
+
+  async testAsync() {
+    return await Promise.resolve(4);
+  }
 }
