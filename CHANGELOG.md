@@ -2,6 +2,19 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.7.0] - 2016-10-13
+### Added
+- Added Babel transpilation step to Webpack build
+- Added regenerator-runtime to handle async/await polyfills
+
+### Changed
+- Changed TypeScript compilation to target ES2015
+- Changed ts-node settings in protractor.conf.js to explicitly target ES5/commonjs
+- Updated README
+
+### Removed
+- Removed @types/core-js dependency
+
 ## [0.6.1] - 2016-10-13
 ### Changed
 - Reverted back to Angular 2.0.2 because of issues running Karma tests (No base href)

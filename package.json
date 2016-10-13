@@ -1,6 +1,6 @@
 {
   "name": "angular2-starter",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "A starter kit for Angular2+Rxjs UIs using Webpack",
   "scripts": {
     "start": "webpack-dev-server --inline --progress --port 8080",
@@ -35,7 +35,6 @@
   "homepage": "https://github.com/ecozoic/angular2-starter#readme",
   "private": true,
   "devDependencies": {
-    "@types/core-js": "0.9.34",
     "@types/jasmine": "2.5.35",
     "@types/node": "6.0.45",
     "@types/protractor": "1.5.20",
