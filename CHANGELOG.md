@@ -2,6 +2,17 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.6.0] - 2016-10-13
+### Changed
+- Use @types for type definitions
+- Moved e2e tests into src folder
+- Upgrade Typescript to 2.0.3
+- Upgrade Angular to 2.1.0
+- Update versions of type definitions
+
+### Removed
+- Removed typings dependency
+
 ## [0.5.3] - 2016-10-12
 ### Removed
 - Removed http-server dependency
