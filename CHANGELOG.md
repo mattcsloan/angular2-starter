@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.6.1] - 2016-10-13
+### Changed
+- Reverted back to Angular 2.0.2 because of issues running Karma tests (No base href)
+
 ## [0.6.0] - 2016-10-13
 ### Changed
 - Use @types for type definitions
