@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## Unreleased
+### Changed
+- Updated package.json engine configuration to Node 6.9.0 and npm 3.10.8
+- Updated several dependencies to latest versions (ts-node, webpack-merge, postcss-loader)
+
 ## [0.7.1] - 2016-10-13
 ### Changed
 - Updated Angular to 2.1.0
