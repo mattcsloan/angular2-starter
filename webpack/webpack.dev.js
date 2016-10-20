@@ -1,9 +1,8 @@
 const path = require('path');
-const webpackMerge = require('webpack-merge');
+const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const commonConfig = require('./webpack.common');
 
-module.exports = webpackMerge(commonConfig, {
+module.exports = {
   devtool: 'cheap-module-eval-source-map',
 
   output: {
@@ -19,6 +18,10 @@ module.exports = webpackMerge(commonConfig, {
 
   devServer: {
     historyApiFallback: true,
-    stats: 'minimal'
+    stats: 'minimal',
+    inline: true,
+    progress: true,
+    compress: true,
+    port: 8080
   }
-});
+};
