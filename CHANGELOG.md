@@ -2,11 +2,14 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
-## Unreleased
+## [0.7.2] - 2016-10-26
 ### Changed
 - Updated package.json engine configuration to Node 6.9.0 and npm 3.10.8
 - Updated several dependencies to latest versions
 - Updated Angular to 2.1.1
+
+### Fixed
+- Fixed issue where had to manually specify chrome driver 2.24 for Protractor to run
 
 ## [0.7.1] - 2016-10-13
 ### Changed
