@@ -9,7 +9,7 @@ import './favicon.ico';
 
 import { AppModule } from './app/app.module';
 
-if (process.env.ENV === 'production') {
+if (process.env.NODE_ENV === 'production') {
   enableProdMode();
 }
 

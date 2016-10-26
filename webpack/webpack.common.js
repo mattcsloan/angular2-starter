@@ -31,7 +31,7 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        loader: 'html'
+        loader: 'html?minimize=false'
       },
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot)$/,
@@ -64,6 +64,11 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      }
     })
   ],
 
