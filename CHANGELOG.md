@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.7.3] - 2016-10-26
+### Added
+- Added travis support
+- Added PhantomJS runner for karma tests
+- Added .nvmrc file
+
 ## [0.7.2] - 2016-10-26
 ### Changed
 - Updated package.json engine configuration to Node 6.9.0 and npm 3.10.8
