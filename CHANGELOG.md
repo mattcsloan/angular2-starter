@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
-## [Unreleased]
+## [0.7.3] - 2016-10-26
 ### Added
 - Added travis support
 - Added PhantomJS runner for karma tests
