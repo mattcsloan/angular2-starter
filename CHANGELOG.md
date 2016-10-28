@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org).
 - Updated typedoc to 0.5.1 and tweaked documentation setup
 - Updated Node engine in package.json to 6.9.1
 - Updated Angular to 2.1.2
+- Moved awesome typescript loader forkChecker option to webpack loader configuration instead of tsconfig.json
 
 ## [0.7.3] - 2016-10-26
 ### Added
