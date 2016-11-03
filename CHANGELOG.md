@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org).
 ### Changed
 - Updated several dependencies to their latest versions
 
+### Fixed
+- Removed OccurenceOrderPlugin from production webpack config because it was causing runtime errors
+
 ## [0.7.4] - 2016-10-29
 ### Changed
 - Updated typedoc to 0.5.1 and tweaked documentation setup
