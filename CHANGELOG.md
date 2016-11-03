@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [Unreleased]
+### Changed
+- Updated several dependencies to their latest versions
+
 ## [0.7.4] - 2016-10-29
 ### Changed
 - Updated typedoc to 0.5.1 and tweaked documentation setup
