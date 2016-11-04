@@ -64,6 +64,7 @@ In addition to the official documentation, these other projects are great resour
 * [angular-webpack2-starter](https://github.com/qdouble/angular-webpack2-starter)
 
 ## Known Issues
-* typedefs for protractor/selenium-web-driver have issues so using triple-slash references to manually reference them when using ts-node to run e2e tests: https://github.com/TypeStrong/ts-node/issues/168
+* typedefs for protractor have issues so using triple-slash reference to manually reference when using ts-node to run e2e tests: https://github.com/TypeStrong/ts-node/issues/168
 * Can't upgrade to istanbul-instrumenter-loader@1.0.0 because karma-coverage needs an update to support new Istanbul API: https://github.com/karma-runner/karma-coverage/issues/245
-* E2E tests are compiled via ts-node and do not run through babel (so no async/await, etc.). Might try to use ts-babel-node in the future.
+* E2E tests are compiled via ts-node and do not run through babel (so no async/await, etc.). Might try to use ts-babel-node in the future
+* Using webpack's OccurenceOrderPlugin is causing runtime errors when doing a production build. Temporarily disabled.
