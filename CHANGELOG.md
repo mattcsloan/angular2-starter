@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org).
 ## [Unreleased]
 ### Changed
 - Updated several dependencies to their latest versions
+- Updated README
+
+## Removed
+- Removed @types dependencies for protractor and selenium-webdriver since protractor provides own typedefs
 
 ## [0.7.5] - 2016-11-03
 ### Changed

@@ -11,8 +11,7 @@
     "suppressImplicitAnyIndexErrors": true,
     "types": [
       "jasmine",
-      "node",
-      "selenium-webdriver"
+      "node"
     ]
   },
   "exclude": [

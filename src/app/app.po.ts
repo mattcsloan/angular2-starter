@@ -1,4 +1,4 @@
-/// <reference path="../../node_modules/@types/protractor/index.d.ts" />
+import { browser, element, by } from 'protractor';
 
 export class AppPage {
   navigateTo() {
