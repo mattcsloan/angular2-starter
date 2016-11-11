@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org).
 ### Changed
 - Updated several dependencies to their latest versions
 - Updated README
+- Updated e2e tests to run using ts-babel-node for consistency w/ rest of codebase
 
 ## Removed
 - Removed @types dependencies for protractor and selenium-webdriver since protractor provides own typedefs

@@ -30,12 +30,7 @@ exports.config = {
   },
 
   beforeLaunch: () => {
-    require('ts-node').register({
-      compilerOptions: {
-        target: 'es5',
-        module: 'commonjs'
-      }
-    });
+    require('ts-babel-node').register();
   },
 
   onPrepare: () => {

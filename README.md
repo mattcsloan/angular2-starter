@@ -63,5 +63,4 @@ In addition to the official documentation, these other projects are great resour
 
 ## Known Issues
 * Can't upgrade to istanbul-instrumenter-loader@1.0.0 until karma-coverage supports new Istanbul API: https://github.com/karma-runner/karma-coverage/issues/245
-* E2E tests are compiled via ts-node and do not run through babel (so no async/await, etc.). Might try to use ts-babel-node in the future
 * Using webpack's OccurenceOrderPlugin is causing runtime errors when doing a production build. Temporarily disabled.
