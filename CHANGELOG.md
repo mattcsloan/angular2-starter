@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
-## [Unreleased]
+## [0.7.7] - 2016-11-14
 ### Changed
 - Updated several dependencies to their latest versions
 - Updated Angular to 2.2.0
