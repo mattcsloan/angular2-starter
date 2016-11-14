@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org).
 ## [Unreleased]
 ### Changed
 - Updated several dependencies to their latest versions
+- Updated Angular to 2.2.0
 
 ### Fixed
 - Fixed schema errors in tslint.json
