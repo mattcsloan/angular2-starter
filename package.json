@@ -35,8 +35,8 @@
   "homepage": "https://github.com/ecozoic/angular2-starter#readme",
   "private": true,
   "devDependencies": {
-    "@types/jasmine": "2.5.37",
-    "@types/node": "6.0.46",
+    "@types/jasmine": "2.5.38",
+    "@types/node": "6.0.47",
     "awesome-typescript-loader": "2.2.4",
     "babel-core": "6.18.2",
     "babel-loader": "6.2.7",
@@ -61,7 +61,7 @@
     "karma-phantomjs-launcher": "1.0.2",
     "karma-sourcemap-loader": "0.3.7",
     "karma-webpack": "1.8.0",
-    "node-sass": "3.11.3",
+    "node-sass": "3.12.2",
     "null-loader": "0.1.1",
     "phantomjs-prebuilt": "2.1.13",
     "postcss-cssnext": "2.8.0",
@@ -83,7 +83,7 @@
     "typescript": "2.0.9",
     "webpack": "1.13.3",
     "webpack-dev-server": "1.16.2",
-    "webpack-merge": "0.15.0"
+    "webpack-merge": "0.16.0"
   },
   "dependencies": {
     "@angular/common": "2.1.2",
