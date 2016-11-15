@@ -49,13 +49,9 @@ module.exports = {
       {
         test: /\.s?css$/,
         exclude: path.resolve(__dirname, '../src/app'),
-        use: ExtractTextPlugin.extract({
+        loader: ExtractTextPlugin.extract({
           fallbackLoader: 'style-loader',
-          loader: [
-            'css-loader',
-            'postcss-loader',
-            'sass-loader'
-          ]
+          loader: 'css-loader!postcss-loader!sass-loader'
         })
       },
       {
