@@ -4,35 +4,39 @@ module.exports = {
   devtool: 'inline-source-map',
 
   resolve: {
-    extensions: ['', '.ts', '.js']
+    extensions: ['.ts', '.js']
   },
 
   module: {
-    loaders: [
+    // https://github.com/AngularClass/angular2-webpack-starter/issues/993
+    exprContextCritical: false,
+
+    rules: [
       {
         test: /\.ts$/,
-        loaders: ['babel?sourceMaps=inline', 'awesome-typescript?sourceMap=false&inlineSourceMap=true&forkChecker=true']
+        use: [
+          'babel-loader?sourceMaps=inline',
+          'awesome-typescript-loader?sourceMap=false&inlineSourceMap=true&forkChecker=true'
+        ]
+      },
+      {
+        test: /\.ts$/,
+        enforce: 'post',
+        use: 'istanbul-instrumenter-loader',
+        include: path.resolve(__dirname, '../src'),
+        exclude: [/\.spec\.ts$/, /\.e2e\.ts$/, /node_modules/]
       },
       {
         test: /\.html$/,
-        loader: 'html'
+        use: 'html-loader'
       },
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-        loader: 'null'
+        use: 'null-loader'
       },
       {
         test: /\.s?css$/,
-        loader: 'raw'
-      }
-    ],
-
-    postLoaders: [
-      {
-        test: /\.ts$/,
-        loader: 'istanbul-instrumenter-loader',
-        include: path.resolve(__dirname, '../src'),
-        exclude: [/\.spec\.ts$/, /\.e2e\.ts$/, /node_modules/]
+        use: 'raw-loader'
       }
     ]
   }

@@ -14,42 +14,59 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js', '.ts']
+    extensions: ['.ts', '.js']
   },
 
   module: {
-    preLoaders: [
+    // https://github.com/AngularClass/angular2-webpack-starter/issues/993
+    exprContextCritical: false,
+
+    rules: [
       {
         test: /\.ts$/,
-        loader: 'tslint'
-      }
-    ],
-    loaders: [
+        enforce: 'pre',
+        use: 'tslint-loader'
+      },
       {
         test: /\.ts$/,
-        loaders: ['babel', 'awesome-typescript?forkChecker=true']
+        use: [
+          'babel-loader',
+          'awesome-typescript-loader?forkChecker=true'
+        ]
       },
       {
         test: /\.html$/,
-        loader: 'html?minimize=false'
+        use: 'html-loader?minimize=false'
       },
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot)$/,
-        loader: 'file?name=assets/[name].[hash].[ext]'
+        use: 'file-loader?name=assets/[name].[hash].[ext]'
       },
       {
         test: /\.ico$/,
-        loader: 'file?name=[name].[ext]'
+        use: 'file-loader?name=[name].[ext]'
       },
       {
         test: /\.s?css$/,
         exclude: path.resolve(__dirname, '../src/app'),
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss?sourceMap!sass?sourceMap')
+        use: ExtractTextPlugin.extract({
+          fallbackLoader: 'style-loader',
+          loader: [
+            'css-loader',
+            'postcss-loader',
+            'sass-loader'
+          ]
+        })
       },
       {
         test: /\.s?css$/,
         include: path.resolve(__dirname, '../src/app'),
-        loaders: ['to-string', 'css?sourceMap', 'postcss?sourceMap', 'sass?sourceMap']
+        use: [
+          'to-string-loader',
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
+        ]
       }
     ]
   },
@@ -69,12 +86,15 @@ module.exports = {
       'process.env': {
         'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
       }
+    }),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        postcss: () => {
+          return [
+            cssNext
+          ];
+        }
+      }
     })
-  ],
-
-  postcss: () => {
-    return [
-      cssNext
-    ];
-  }
+  ]
 };
