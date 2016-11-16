@@ -24,6 +24,6 @@ module.exports = {
     historyApiFallback: true,
     stats: 'minimal',
     compress: true,
-    port: port
+    port
   }
 };

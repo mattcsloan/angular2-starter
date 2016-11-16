@@ -55,6 +55,7 @@ module.exports = {
         test: /\.ico$/,
         use: 'file-loader?name=[name].[ext]'
       },
+      // TODO: css source maps
       {
         test: /\.s?css$/,
         exclude: path.resolve(__dirname, '../src/app'),
