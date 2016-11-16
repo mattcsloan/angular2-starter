@@ -18,7 +18,8 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              sourceMaps: 'inline'
+              sourceMaps: 'inline',
+              presets: ["es2015", "es2016", "es2017"]
             }
           },
           {
