@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [Unreleased]
+### Changed
+- Upgraded to Webpack 2
+- Updated several dependencies to their latest versions
+
+### Added
+- Added support for tree-shaking when doing a production build
+
 ## [0.7.7] - 2016-11-14
 ### Changed
 - Updated several dependencies to their latest versions
