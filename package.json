@@ -1,6 +1,6 @@
 {
   "name": "angular2-starter",
-  "version": "0.7.7",
+  "version": "0.8.0",
   "description": "A starter kit for Angular2+Rxjs UIs using Webpack",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server",
