@@ -14,42 +14,65 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js', '.ts']
+    extensions: ['.ts', '.js']
   },
 
   module: {
-    preLoaders: [
+    // https://github.com/AngularClass/angular2-webpack-starter/issues/993
+    exprContextCritical: false,
+
+    rules: [
       {
         test: /\.ts$/,
-        loader: 'tslint'
-      }
-    ],
-    loaders: [
+        enforce: 'pre',
+        use: 'tslint-loader'
+      },
       {
         test: /\.ts$/,
-        loaders: ['babel', 'awesome-typescript?forkChecker=true']
+        use: [
+          'babel-loader',
+          {
+            loader: 'awesome-typescript-loader',
+            options: {
+              forkChecker: true
+            }
+          }
+        ]
       },
       {
         test: /\.html$/,
-        loader: 'html?minimize=false'
+        use: 'html-loader',
+        options: {
+          minimize: false
+        }
       },
+      // TODO: file loader doesn't seem to work w/ options object
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot)$/,
-        loader: 'file?name=assets/[name].[hash].[ext]'
+        use: 'file-loader?name=assets/[name].[hash].[ext]'
       },
       {
         test: /\.ico$/,
-        loader: 'file?name=[name].[ext]'
+        use: 'file-loader?name=[name].[ext]'
       },
+      // TODO: css source maps
       {
         test: /\.s?css$/,
         exclude: path.resolve(__dirname, '../src/app'),
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss?sourceMap!sass?sourceMap')
+        loader: ExtractTextPlugin.extract({
+          fallbackLoader: 'style-loader',
+          loader: 'css-loader!postcss-loader!sass-loader'
+        })
       },
       {
         test: /\.s?css$/,
         include: path.resolve(__dirname, '../src/app'),
-        loaders: ['to-string', 'css?sourceMap', 'postcss?sourceMap', 'sass?sourceMap']
+        use: [
+          'to-string-loader',
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
+        ]
       }
     ]
   },
@@ -69,12 +92,16 @@ module.exports = {
       'process.env': {
         'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
       }
+    }),
+    // TODO: better way to do this w/o loaderoptionsplugin?
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        postcss: () => {
+          return [
+            cssNext
+          ];
+        }
+      }
     })
-  ],
-
-  postcss: () => {
-    return [
-      cssNext
-    ];
-  }
+  ]
 };

@@ -12,15 +12,18 @@ module.exports = {
     chunkFilename: '[id].[hash].chunk.js'
   },
 
+  // TODO: css not being minified b/c uglifyjsplugin
+  // no longer automatically switches loaders to minification mode
   plugins: [
     new webpack.NoErrorsPlugin(),
-    //new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
       compress: {
         warnings: false
       }
     }),
-    new ExtractTextPlugin('[name].[hash].css')
+    new ExtractTextPlugin({
+      filename: '[name].[hash].css'
+    })
   ]
 };
