@@ -31,13 +31,22 @@ module.exports = {
         test: /\.ts$/,
         use: [
           'babel-loader',
-          'awesome-typescript-loader?forkChecker=true'
+          {
+            loader: 'awesome-typescript-loader',
+            options: {
+              forkChecker: true
+            }
+          }
         ]
       },
       {
         test: /\.html$/,
-        use: 'html-loader?minimize=false'
+        use: 'html-loader',
+        options: {
+          minimize: false
+        }
       },
+      // TODO: file loader doesn't seem to work w/ options object
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot)$/,
         use: 'file-loader?name=assets/[name].[hash].[ext]'
@@ -83,6 +92,7 @@ module.exports = {
         'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
       }
     }),
+    // TODO: better way to do this w/o loaderoptionsplugin?
     new webpack.LoaderOptionsPlugin({
       options: {
         postcss: () => {

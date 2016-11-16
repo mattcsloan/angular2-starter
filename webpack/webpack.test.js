@@ -15,8 +15,20 @@ module.exports = {
       {
         test: /\.ts$/,
         use: [
-          'babel-loader?sourceMaps=inline',
-          'awesome-typescript-loader?sourceMap=false&inlineSourceMap=true&forkChecker=true'
+          {
+            loader: 'babel-loader',
+            options: {
+              sourceMaps: 'inline'
+            }
+          },
+          {
+            loader: 'awesome-typescript-loader',
+            options: {
+              sourceMap: false,
+              inlineSourceMap: true,
+              forkChecker: true
+            }
+          }
         ]
       },
       {
