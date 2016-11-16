@@ -36,7 +36,8 @@ module.exports = {
             options: {
               forkChecker: true
             }
-          }
+          },
+          'angular2-template-loader'
         ]
       },
       {

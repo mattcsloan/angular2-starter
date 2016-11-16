@@ -19,7 +19,7 @@ module.exports = {
             loader: 'babel-loader',
             options: {
               sourceMaps: 'inline',
-              presets: ["es2015", "es2016", "es2017"]
+              presets: ['es2015', 'es2016', 'es2017']
             }
           },
           {
@@ -29,7 +29,8 @@ module.exports = {
               inlineSourceMap: true,
               forkChecker: true
             }
-          }
+          },
+          'angular2-template-loader'
         ]
       },
       {

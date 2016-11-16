@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.8.1] - 2016-11-16
+### Changed
+- Updated README
+
+### Added
+- Added angular2-template-loader to prepare for AOT
+
 ## [0.8.0] - 2016-11-16
 ### Changed
 - Upgraded to Webpack 2
