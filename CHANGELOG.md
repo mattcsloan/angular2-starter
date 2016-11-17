@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.8.3] - 2016-11-17
+### Removed
+- Temporarily removed yarn support
+
+### Changed
+- Updated several dependencies to their latest versions
+- Updated Angular to 2.2.1
+
 ## [0.8.2] - 2016-11-16
 ### Added
 - Added yarn support
