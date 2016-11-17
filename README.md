@@ -7,7 +7,7 @@ This project is a scaffold to start new Angular 2 projects powered by Webpack. T
 ```
 git clone https://github.com/ecozoic/angular2-starter
 cd angular2-starter
-npm install
+yarn
 ```
 
 ## Development
@@ -39,6 +39,7 @@ npm run e2e
 
 ## Tools & Features
 * Build powered by Webpack 2, Babel, and TypeScript 2
+* Optimized production build with UglifyJS + tree-shaking
 * Linting with tslint + codelyzer, and sass-lint
 * Unit testing with Karma and Jasmine
 * Test coverage reporting via Istanbul

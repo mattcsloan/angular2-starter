@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [Unreleased]
+### Added
+- Added yarn support
+
+### Changed
+- Updated several dependencies to their latest versions
+
 ## [0.8.1] - 2016-11-16
 ### Changed
 - Updated README
