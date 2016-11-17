@@ -7,7 +7,7 @@ This project is a scaffold to start new Angular 2 projects powered by Webpack. T
 ```
 git clone https://github.com/ecozoic/angular2-starter
 cd angular2-starter
-yarn
+npm install
 ```
 
 ## Development
@@ -65,3 +65,4 @@ In addition to the official documentation, these other projects are great resour
 * Can't upgrade to istanbul-instrumenter-loader@1.0.0 until karma-coverage supports new Istanbul API: https://github.com/karma-runner/karma-coverage/issues/245
 * CSS source maps not yet working after webpack 2 upgrade
 * CSS not being minified in production (Uglify plugin no longer automatically switches loaders into minification mode)
+* Yarn still having issues installing scoped packages on Windows: https://github.com/yarnpkg/yarn/issues/1861
