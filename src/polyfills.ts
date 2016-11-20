@@ -1,14 +1,15 @@
 import 'core-js/es6';
 import 'core-js/es7/reflect';
 import 'regenerator-runtime/runtime';
-require('zone.js/dist/zone');
+import 'zone.js/dist/zone';
 
 if (process.env.ENV === 'production') {
   // Production
 } else {
   // Development
 
-  (<any>Error).stackTraceLimit = Infinity;
+  Error.stackTraceLimit = Infinity;
 
+  // tslint:disable-next-line:no-var-requires
   require('zone.js/dist/long-stack-trace-zone');
 }

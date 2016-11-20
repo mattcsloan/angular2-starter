@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org).
 ### Added
 - gitattributes
 
+### Changed
+- Updated several dependencies to their latest versions
+
 ## [0.8.3] - 2016-11-17
 ### Removed
 - Temporarily removed yarn support
