@@ -1,5 +1,5 @@
 # angular2-starter
-[![Build Status](https://travis-ci.org/ecozoic/angular2-starter.svg?branch=master)](https://travis-ci.org/ecozoic/angular2-starter) [![Dependency Status](https://david-dm.org/ecozoic/angular2-starter.svg)](https://david-dm.org/ecozoic/angular2-starter) [![devDependency Status](https://david-dm.org/ecozoic/angular2-starter/dev-status.png)](https://david-dm.org/ecozoic/angular2-starter#info=devDependencies)
+[![Build Status](https://travis-ci.org/ecozoic/angular2-starter.svg?branch=master)](https://travis-ci.org/ecozoic/angular2-starter) [![Dependency Status](https://david-dm.org/ecozoic/angular2-starter.svg)](https://david-dm.org/ecozoic/angular2-starter) [![devDependency Status](https://david-dm.org/ecozoic/angular2-starter/dev-status.png)](https://david-dm.org/ecozoic/angular2-starter?type=dev)
 
 This project is a scaffold to start new Angular 2 projects powered by Webpack. There are quite a few good examples out there but I wanted to make one that fit my specific needs and used my favorite tools. The webpack build process in this project is based on the awesome guide on the official Angular 2 documentation site [here](https://angular.io/docs/ts/latest/guide/webpack.html).
 
