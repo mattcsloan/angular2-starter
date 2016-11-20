@@ -1,5 +1,5 @@
 # angular2-starter
-[![Build Status](https://travis-ci.org/ecozoic/angular2-starter.svg?branch=master)](https://travis-ci.org/ecozoic/angular2-starter)
+[![Build Status](https://travis-ci.org/ecozoic/angular2-starter.svg?branch=master)](https://travis-ci.org/ecozoic/angular2-starter) [![Dependency Status](https://david-dm.org/ecozoic/angular2-starter.svg)](https://david-dm.org/ecozoic/angular2-starter) [![devDependency Status](https://david-dm.org/ecozoic/angular2-starter/dev-status.png)](https://david-dm.org/ecozoic/angular2-starter?type=dev)
 
 This project is a scaffold to start new Angular 2 projects powered by Webpack. There are quite a few good examples out there but I wanted to make one that fit my specific needs and used my favorite tools. The webpack build process in this project is based on the awesome guide on the official Angular 2 documentation site [here](https://angular.io/docs/ts/latest/guide/webpack.html).
 
@@ -65,3 +65,4 @@ In addition to the official documentation, these other projects are great resour
 * Can't upgrade to istanbul-instrumenter-loader@1.0.0 until karma-coverage supports new Istanbul API: https://github.com/karma-runner/karma-coverage/issues/245
 * CSS source maps not yet working after webpack 2 upgrade
 * CSS not being minified in production (Uglify plugin no longer automatically switches loaders into minification mode)
+* Can't upgrade to tslint@4.0.1 until tslint-loader gets updated

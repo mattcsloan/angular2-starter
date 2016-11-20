@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.8.5]- 2016-11-20
+### Changed
+- Update README
+- Add david-dm badges to track dependency status
+
 ## [0.8.4] - 2016-11-20
 ### Added
 - gitattributes
