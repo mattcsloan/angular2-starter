@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
     './app.component.scss'
   ]
 })
-export class AppComponent implements OnInit {
+class AppComponent implements OnInit {
   constructor() { }
 
   ngOnInit() { }
@@ -20,3 +20,12 @@ export class AppComponent implements OnInit {
     return await Promise.resolve(4);
   }
 }
+
+// test tree shake
+const someFunc: any = () => 'treeshake!';
+
+export {
+  AppComponent,
+  someFunc
+};
+
