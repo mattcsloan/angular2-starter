@@ -7,6 +7,7 @@
     "object-literal-sort-keys": false,
     "quotemark": [true, "single"],
     "trailing-comma": [true, { "multiline": "never", "singleline": "never" }],
+    "whitespace": [true, "check-branch", "check-decl", "check-module", "check-operator", "check-type"],
     "directive-selector-name": [true, "camelCase"],
     "component-selector-name": [true, "kebab-case"],
     "directive-selector-type": [true, "attribute"],
