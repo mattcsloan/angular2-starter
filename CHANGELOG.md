@@ -2,12 +2,14 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
-## [Unreleased]
+## [0.8.4] - 2016-11-20
 ### Added
 - gitattributes
+- Yarn support (0.17.6)
 
 ### Changed
 - Updated several dependencies to their latest versions
+- Simplified tslint configuration
 
 ## [0.8.3] - 2016-11-17
 ### Removed
