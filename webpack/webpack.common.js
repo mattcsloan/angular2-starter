@@ -57,7 +57,7 @@ module.exports = {
         exclude: path.resolve(__dirname, '../src/app'),
         loader: ExtractTextPlugin.extract({
           fallbackLoader: 'style-loader',
-          loader: 'css-loader?importLoaders=1!postcss-loader!sass-loader'
+          loader: 'css-loader?importLoaders=2!postcss-loader!sass-loader'
         })
       },
       {
@@ -65,7 +65,7 @@ module.exports = {
         include: path.resolve(__dirname, '../src/app'),
         use: [
           'to-string-loader',
-          'css-loader?importLoaders=1',
+          'css-loader?importLoaders=2',
           'postcss-loader',
           'sass-loader'
         ]
