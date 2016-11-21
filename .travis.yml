@@ -1,8 +1,5 @@
 language: node_js
 
-env:
-  - NODE_ENV=ci
-
 # safelist
 branches:
   only:
