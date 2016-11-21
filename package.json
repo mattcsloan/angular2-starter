@@ -1,11 +1,11 @@
 {
   "name": "angular2-starter",
-  "version": "0.8.5",
+  "version": "0.8.6",
   "description": "A starter kit for Angular2+Rxjs UIs using Webpack",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server",
     "pretest": "npm run clean:cov",
-    "test": "karma start",
+    "test": "cross-env NODE_ENV=test karma start",
     "posttest": "npm run cover:html && npm run cover:lcov",
     "cover:html": "remap-istanbul --input ./coverage/json/coverage-final.json --output ./coverage/html --type html",
     "cover:lcov": "remap-istanbul --input ./coverage/json/coverage-final.json --output ./coverage/json/lcov.info --type lcovonly",
@@ -41,6 +41,7 @@
     "awesome-typescript-loader": "2.2.4",
     "babel-core": "6.18.2",
     "babel-loader": "6.2.8",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.18.0",
     "babel-preset-es2015": "6.18.0",
     "babel-preset-es2016": "6.16.0",
     "babel-preset-es2017": "6.16.0",
@@ -103,7 +104,7 @@
     "koa-logger": "1.3.0",
     "koa-send": "3.2.0",
     "koa-static": "2.0.0",
-    "regenerator-runtime": "0.9.6",
+    "regenerator-runtime": "^0.10.0",
     "rxjs": "5.0.0-beta.12",
     "zone.js": "0.6.21"
   },
