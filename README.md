@@ -63,6 +63,4 @@ In addition to the official documentation, these other projects are great resour
 
 ## Known Issues
 * Can't upgrade to istanbul-instrumenter-loader@1.0.0 until karma-coverage supports new Istanbul API: https://github.com/karma-runner/karma-coverage/issues/245
-* CSS source maps not yet working after webpack 2 upgrade
-* CSS not being minified in production (Uglify plugin no longer automatically switches loaders into minification mode)
 * Can't upgrade to tslint@4.0.1 until tslint-loader gets updated

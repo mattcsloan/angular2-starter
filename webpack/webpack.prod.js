@@ -12,8 +12,6 @@ module.exports = {
     chunkFilename: '[id].[hash].chunk.js'
   },
 
-  // TODO: css not being minified b/c uglifyjsplugin
-  // no longer automatically switches loaders to minification mode
   plugins: [
     new webpack.NoErrorsPlugin(),
     new webpack.optimize.UglifyJsPlugin({
@@ -24,6 +22,14 @@ module.exports = {
     }),
     new ExtractTextPlugin({
       filename: '[name].[hash].css'
+    }),
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+      options: {
+        htmlLoader: {
+          minimize: false
+        }
+      }
     })
   ]
 };

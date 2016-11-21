@@ -2,6 +2,16 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [Unreleased]
+### Changed
+- Added test-specific babelrc instead of duplicating info in webpack test configuration
+
+### Added
+- postcss.config.js file to store postcss plugin information
+
+### Fixed
+- CSS is now properly minified in production builds
+
 ## [0.8.5]- 2016-11-20
 ### Changed
 - Update README

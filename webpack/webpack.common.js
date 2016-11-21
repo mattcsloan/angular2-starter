@@ -42,12 +42,8 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        use: 'html-loader',
-        options: {
-          minimize: false
-        }
+        use: 'html-loader'
       },
-      // TODO: file loader doesn't seem to work w/ options object
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot)$/,
         use: 'file-loader?name=assets/[name].[hash].[ext]'
@@ -56,13 +52,12 @@ module.exports = {
         test: /\.ico$/,
         use: 'file-loader?name=[name].[ext]'
       },
-      // TODO: css source maps
       {
         test: /\.s?css$/,
         exclude: path.resolve(__dirname, '../src/app'),
         loader: ExtractTextPlugin.extract({
           fallbackLoader: 'style-loader',
-          loader: 'css-loader!postcss-loader!sass-loader'
+          loader: 'css-loader?importLoaders=1!postcss-loader!sass-loader'
         })
       },
       {
@@ -70,7 +65,7 @@ module.exports = {
         include: path.resolve(__dirname, '../src/app'),
         use: [
           'to-string-loader',
-          'css-loader',
+          'css-loader?importLoaders=1',
           'postcss-loader',
           'sass-loader'
         ]
@@ -92,16 +87,6 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-      }
-    }),
-    // TODO: better way to do this w/o loaderoptionsplugin?
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        postcss: () => {
-          return [
-            cssNext
-          ];
-        }
       }
     })
   ]
