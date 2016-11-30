@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [Unreleased]
+### Changed
+- Updated several dependencies to their latest versions
+
+## Removed
+- Removed barrel files b/c I'm tired of weird circular dependency issues
+
 ## [0.8.7] - 2016-11-25
 ### Changed
 - Updated Angular to 2.2.3

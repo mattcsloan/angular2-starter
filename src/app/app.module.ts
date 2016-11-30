@@ -6,10 +6,8 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { routing, appRoutingProviders } from './app.routing';
 
-import {
-  HomeComponent,
-  PageNotFoundComponent
-} from './components';
+import { HomeComponent } from './components/home/home.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   imports: [

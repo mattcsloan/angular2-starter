@@ -1,10 +1,9 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import {
-  HomeComponent,
-  PageNotFoundComponent
-} from './components';
+import { HomeComponent } from './components/home/home.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
