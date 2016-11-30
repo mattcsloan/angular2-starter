@@ -19,6 +19,7 @@ module.exports = {
               sourceMap: false,
               inlineSourceMap: true,
               forkChecker: true,
+              useCache: true,
               module: 'commonjs'
             }
           },

@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.9.1] - 2016-11-30
+### Changed
+- Use ATL caching in webpack test configuration
+
 ## [0.9.0] - 2016-11-30
 ### Added
 - Added @ngrx/store
