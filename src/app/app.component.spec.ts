@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
+import { Component } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
@@ -13,7 +14,10 @@ describe('AppComponent', () => {
       imports: [
         RouterModule.forRoot([])
       ],
-      declarations: [ AppComponent ],
+      declarations: [
+        AppComponent,
+        MockDevToolsComponent
+      ],
       providers: [
         { provide: APP_BASE_HREF, useValue: '/' }
       ]
@@ -26,11 +30,10 @@ describe('AppComponent', () => {
   it('should work', () => {
     expect(component.test()).toBe(4);
   });
-
-  it('should work async', (done: DoneFn) => {
-    component.testAsync().then((result: number) => {
-      expect(result).toBe(4);
-      done();
-    });
-  });
 });
+
+@Component({
+  selector: 'my-dev-tools',
+  template: ''
+})
+class MockDevToolsComponent { }

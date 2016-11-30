@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   devtool: 'inline-source-map',
@@ -8,25 +9,17 @@ module.exports = {
   },
 
   module: {
-    // https://github.com/AngularClass/angular2-webpack-starter/issues/993
-    exprContextCritical: false,
-
     rules: [
       {
         test: /\.ts$/,
         use: [
           {
-            loader: 'babel-loader',
-            options: {
-              sourceMaps: 'inline'
-            }
-          },
-          {
             loader: 'awesome-typescript-loader',
             options: {
               sourceMap: false,
               inlineSourceMap: true,
-              forkChecker: true
+              forkChecker: true,
+              module: 'commonjs'
             }
           },
           'angular2-template-loader'
@@ -52,5 +45,12 @@ module.exports = {
         use: 'raw-loader'
       }
     ]
-  }
+  },
+
+  plugins: [
+    new webpack.ContextReplacementPlugin(
+      /angular(\\|\/)core(\\|\/)src(\\|\/)linker/,
+      path.resolve(__dirname, '../src')
+    )
+  ]
 };

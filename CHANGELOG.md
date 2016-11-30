@@ -2,6 +2,19 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.9.0] - 2016-11-30
+### Added
+- Added @ngrx/store
+- Added @ngrx/store-devtools
+
+### Changed
+- Updated several dependencies to their latest versions
+- Improved webpack configuration
+
+## Removed
+- Removed barrel files b/c I'm tired of weird circular dependency issues
+- Removed babel to simplify build process and prepare for TypeScript 2.1
+
 ## [0.8.7] - 2016-11-25
 ### Changed
 - Updated Angular to 2.2.3

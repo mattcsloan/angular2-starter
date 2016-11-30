@@ -18,9 +18,6 @@ module.exports = {
   },
 
   module: {
-    // https://github.com/AngularClass/angular2-webpack-starter/issues/993
-    exprContextCritical: false,
-
     rules: [
       {
         test: /\.ts$/,
@@ -30,11 +27,11 @@ module.exports = {
       {
         test: /\.ts$/,
         use: [
-          'babel-loader',
           {
             loader: 'awesome-typescript-loader',
             options: {
-              forkChecker: true
+              forkChecker: true,
+              useCache: true
             }
           },
           'angular2-template-loader'
@@ -88,6 +85,10 @@ module.exports = {
       'process.env': {
         'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
       }
-    })
+    }),
+    new webpack.ContextReplacementPlugin(
+      /angular(\\|\/)core(\\|\/)src(\\|\/)linker/,
+      path.resolve(__dirname, '../src')
+    )
   ]
 };
