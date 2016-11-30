@@ -7,7 +7,7 @@ import './main.scss';
 // favicon
 import './favicon.ico';
 
-import { AppModule } from './app/app.module';
+import { AppModule } from './app';
 
 if (process.env.NODE_ENV === 'production') {
   enableProdMode();

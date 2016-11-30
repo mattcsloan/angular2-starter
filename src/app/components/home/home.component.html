@@ -1,2 +1,8 @@
 <h2>Home</h2>
 <img src="../../../angular.png">
+<div>
+  <button (click)="increment()">Increment</button>
+  <div>Current Count: {{ counter | async }}</div>
+  <button (click)="decrement()">Decrement</button>
+  <button (click)="reset()">Reset</button>
+</div>
