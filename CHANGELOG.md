@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org).
 
 ## Removed
 - Removed barrel files b/c I'm tired of weird circular dependency issues
+- Removed babel to simplify build process and prepare for TypeScript 2.1
 
 ## [0.8.7] - 2016-11-25
 ### Changed

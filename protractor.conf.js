@@ -23,14 +23,18 @@ exports.config = {
   directConnect: true,
 
   capabilities: {
-    'browserName': 'chrome',
-    'chromeOptions': {
-      'args': ['show-fps-counter=true']
+    browserName: 'chrome',
+    chromeOptions: {
+      args: ['show-fps-counter=true']
     }
   },
 
   beforeLaunch: () => {
-    require('ts-babel-node').register();
+    require('ts-node').register({
+      compilerOptions: {
+        module: 'commonjs'
+      }
+    });
   },
 
   onPrepare: () => {

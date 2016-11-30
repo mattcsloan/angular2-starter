@@ -7,20 +7,8 @@ import { Component } from '@angular/core';
     './app.component.scss'
   ]
 })
-class AppComponent {
+export class AppComponent {
   public test() {
     return 4;
   }
-
-  public async testAsync() {
-    return await Promise.resolve(4);
-  }
 }
-
-// test tree shake
-const someFunc: any = () => 'treeshake!';
-
-export {
-  AppComponent,
-  someFunc
-};

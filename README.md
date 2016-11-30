@@ -46,7 +46,7 @@ This will generate typedoc documentation.
 
 
 ## Tools & Features
-* Build powered by Webpack 2, Babel 6, and TypeScript 2
+* Build powered by Webpack 2 and TypeScript 2
 * Optimized production build with UglifyJS + tree-shaking
 * Linting with tslint + codelyzer, and sass-lint
 * Unit tests with Karma, Jasmine, and Istanbul coverage reports
