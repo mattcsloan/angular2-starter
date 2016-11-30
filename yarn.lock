@@ -34,6 +34,22 @@
   version "3.2.3"
   resolved "https://registry.yarnpkg.com/@angular/router/-/router-3.2.3.tgz#07cd0e978abc53abb71be9d17353d7ff93f05083"
 
+"@ngrx/core@1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/core/-/core-1.2.0.tgz#882b46abafa2e0e6d887cb71a1b2c2fa3e6d0dc6"
+
+"@ngrx/store-devtools@3.2.2":
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-3.2.2.tgz#4409c18b8ae656a2cdfb097155855d5d5d81ab80"
+
+"@ngrx/store-log-monitor@3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@ngrx/store-log-monitor/-/store-log-monitor-3.0.2.tgz#951dc2e3d8ba0113ea4ed6744d9ce7640fee3271"
+
+"@ngrx/store@2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-2.2.1.tgz#316ec1e43aa5a0166e5e6e1aa2c34a4049386510"
+
 "@types/core-js@0.9.34":
   version "0.9.34"
   resolved "https://registry.yarnpkg.com/@types/core-js/-/core-js-0.9.34.tgz#72c521d8e59fdaa8b65f76db71fa53c82c7c21c5"

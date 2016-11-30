@@ -4,6 +4,7 @@
     "node_modules/codelyzer"
   ],
   "rules": {
+    "interface-name": [true, "never-prefix"],
     "object-literal-sort-keys": false,
     "quotemark": [true, "single"],
     "trailing-comma": [true, { "multiline": "never", "singleline": "never" }],

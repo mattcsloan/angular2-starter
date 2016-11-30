@@ -10,4 +10,6 @@ import '@angular/router';
 // RxJS
 import 'rxjs';
 
-// other vendors here...
+// ngrx
+import '@ngrx/core';
+import '@ngrx/store';

@@ -3,8 +3,12 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
 ## [Unreleased]
+### Added
+- Added @ngrx/store
+
 ### Changed
 - Updated several dependencies to their latest versions
+- Improved webpack configuration
 
 ## Removed
 - Removed barrel files b/c I'm tired of weird circular dependency issues
