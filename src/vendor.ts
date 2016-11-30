@@ -13,3 +13,5 @@ import 'rxjs';
 // ngrx
 import '@ngrx/core';
 import '@ngrx/store';
+import '@ngrx/store-devtools';
+import '@ngrx/store-log-monitor';
