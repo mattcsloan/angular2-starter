@@ -56,6 +56,8 @@ This will generate typedoc documentation.
 
 ## Roadmap
 * ngrx-dev-tools
+* Angular Material
+* AngularFire
 * ngrx/router-store
 
 ## Other Examples

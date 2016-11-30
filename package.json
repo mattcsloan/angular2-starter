@@ -35,6 +35,8 @@
   "homepage": "https://github.com/ecozoic/angular2-starter#readme",
   "private": true,
   "devDependencies": {
+    "@ngrx/store-devtools": "3.2.2",
+    "@ngrx/store-log-monitor": "3.0.2",
     "@types/core-js": "0.9.34",
     "@types/jasmine": "2.5.38",
     "@types/node": "6.0.51",
@@ -92,8 +94,6 @@
     "@angular/router": "3.2.3",
     "@ngrx/core": "1.2.0",
     "@ngrx/store": "2.2.1",
-    "@ngrx/store-devtools": "3.2.2",
-    "@ngrx/store-log-monitor": "3.0.2",
     "core-js": "2.4.1",
     "koa": "1.2.4",
     "koa-compress": "1.0.9",
