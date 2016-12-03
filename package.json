@@ -1,6 +1,6 @@
 {
   "name": "angular2-starter",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "A starter kit for Angular2+Rxjs UIs using Webpack",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server",
@@ -13,10 +13,10 @@
     "build": "cross-env NODE_ENV=production webpack --progress --profile --colors --bail",
     "serve": "cross-env NODE_ENV=production node server.js",
     "clean:build": "rimraf dist",
-    "clean:doc": "rimraf doc",
+    "clean:docs": "rimraf docs",
     "clean:test": "rimraf coverage",
-    "predoc": "npm run clean:doc",
-    "doc": "typedoc --options typedoc.json --exclude \"**/*.+(spec|e2e).ts\" ./src/app",
+    "predocs": "npm run clean:docs",
+    "docs": "typedoc --options typedoc.json --exclude \"**/*.+(spec|e2e).ts\" ./src/app",
     "webdriver-update": "webdriver-manager update",
     "pree2e": "npm run webdriver-update",
     "e2e": "protractor",
