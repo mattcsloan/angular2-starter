@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.9.2] - 2016-12-03
+### Changed
+- Upgraded Angular to 2.2.4
+- Updated several dependencies to their latest versions
+- Renamed doc to docs for typedoc setup
+
 ## [0.9.1] - 2016-11-30
 ### Changed
 - Use ATL caching in webpack test configuration
