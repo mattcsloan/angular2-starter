@@ -35,6 +35,7 @@
   "homepage": "https://github.com/ecozoic/angular2-starter#readme",
   "private": true,
   "devDependencies": {
+    "@angularclass/hmr": "1.2.2",
     "@ngrx/store-devtools": "3.2.2",
     "@ngrx/store-log-monitor": "3.0.2",
     "@types/core-js": "0.9.35",
